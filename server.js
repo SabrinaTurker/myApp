@@ -8,6 +8,8 @@ app.set("views", "views")
 
 app.use(express.static("public"))
 
+app.use(express.urlencoded({ extended: true })); // to parse the form data
+
 app.listen(8080, () => {
 	console.log("server is at port 8080", 8080)
 })
@@ -19,5 +21,15 @@ app.get("/", (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    // login.handlebars
+    res.render("login", { message: "" });
+});
+
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    // check if the credentials are valid
+    if (username === 'Quinesha' && password === 'meep') {
+        res.render('success');
+    } else {
+        res.render('login', { message: "Invalid username or password" });
+    }
 })

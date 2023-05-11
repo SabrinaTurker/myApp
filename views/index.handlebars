@@ -1,6 +1,27 @@
 <h1 id="logo">Logo</h1>
 <h2>Welcome to the owl house!</h2>
 
-<a href="/login">
-    <button class="button">Let's get started</button>
-</a>
+<h3>Login</h3>
+<form action="/login" method="POST" enctype="multipart/form-data">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <label for="avatar">Avatar:</label>
+        <input type="file" id="avatar" name="avatar">
+    </div>
+    <div>
+        <button id="signUp" type="submit">Sign up</button>
+    </div>
+    <h4>Or</h4>
+    <div>
+        <form action="/guest" method="POST">
+            <button id="guestButton" type="submit">Continue as guest</button>
+        </form>
+    </div>
+</form>

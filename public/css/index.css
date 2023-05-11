@@ -1,12 +1,16 @@
 body{
-    background-color: rgb(179, 141, 193);
+    background-color: rgb(222, 206, 238);
     font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center everything horizontally */
 }
 
 #logo{ 
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding: .5em;
+    margin: 0;
 }
 
 h1{
@@ -22,6 +26,11 @@ h1{
 h2{
     display: flex;
     justify-content: center;
+    margin-top: 0;
+}
+
+h3{
+    margin-top: 2em;
 }
 
 .Qpage_h2{
@@ -100,3 +109,72 @@ ul{
     border-radius: 5em;
     border-style: none;
 }
+
+form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f1e6ff;
+    max-width: 400px;
+    padding: 20px;
+    margin: 5 auto; /* Center the form horizontally */
+    display: inline-block; /* Make the form only take up the necessary width */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    background-color: #9375c3;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #1c055b;
+  }
+
+  #signUp{
+    margin-top: 2em;
+  }
+
+  #guestButton{
+    background-color: #7e7390;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+  
+  
+  
+  
+  
