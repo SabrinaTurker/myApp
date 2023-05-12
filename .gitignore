@@ -1,1 +1,3 @@
 node_modules/
+.eslinrrc.json
+.prettierrc.json
