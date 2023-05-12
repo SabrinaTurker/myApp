@@ -8,7 +8,8 @@ app.set("views", "views")
 
 app.use(express.static("public"))
 
-app.use(express.urlencoded({ extended: true })); // to parse the form data
+app.use(express.urlencoded({ extended: true })) 
+// to parse the form data
 
 app.listen(8080, () => {
 	console.log("server is at port 8080", 8080)
@@ -20,16 +21,17 @@ app.get("/", (req, res) => {
 	//homepage
 })
 
-app.get('/login', (req, res) => {
-    res.render("login", { message: "" });
-});
+app.get('/guest', (req, res) => {
+	res.render("login",  { message: ""})
+	//loginpage versie 2
+})
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    // check if the credentials are valid
-    if (username === 'Quinesha' && password === 'meep') {
-        res.render('success');
+    // const { username, password } = req.body
+    // check if everything is correct
+    if (req.body.username === "Quinesha" && req.body.password === "meep") {
+        res.render('login')
     } else {
-        res.render('login', { message: "Invalid username or password" });
+        res.render('error', { message: "Invalid username or password" })
     }
 })
