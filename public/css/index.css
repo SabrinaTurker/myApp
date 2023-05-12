@@ -14,6 +14,7 @@ body{
 }
 
 h1{
+    margin: 1em;
     display: flex;
     justify-content: center;
 }
@@ -119,16 +120,16 @@ form {
     padding: 20px;
     margin: 5 auto; /* Center the form horizontally */
     display: inline-block; /* Make the form only take up the necessary width */
-  }
+}
   
-  label {
+label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
-  }
+}
   
-  input[type="text"],
-  input[type="password"]{
+input[type="text"],
+input[type="password"]{
     border: 1px solid #ccc;
     border-radius: 3px;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
@@ -137,9 +138,9 @@ form {
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
-  }
+}
   
-  button[type="submit"] {
+button[type="submit"] {
     background-color: #9375c3;
     border: none;
     border-radius: 3px;
@@ -149,21 +150,37 @@ form {
     font-size: 16px;
     padding: 10px;
     width: 100%;
-  }
+}
   
-  button[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #1c055b;
-  }
+}
 
-  #signUp{
+#signUp{
     margin-top: 2em;
-  }
+}
 
-  #guestButton{
+#guestButton{
     background-color: #7e7390;
-  }
+}
   
-  .container {
+#quizButton-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#quizButton{
+    width: 100%;
+    position: fixed;
+    top: 20em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+}
+
+.container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
