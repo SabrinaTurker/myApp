@@ -32,6 +32,6 @@ app.post("/login", (req, res) => {
 	if (req.body.username === "Quinesha" && req.body.password === "meep") {
 		res.render("login")
 	} else {
-		res.render("error", { message: "Invalid username or password" })
+		res.render("success", { message: "Invalid username or password" })
 	}
 })
