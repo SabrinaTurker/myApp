@@ -36,3 +36,30 @@ app.post("/login", (req, res) => {
 		//display error message
 	}
 })
+
+const mongoose = require("mongoose")
+
+// Replace 'YOUR_CONNECTION_STRING' with your actual MongoDB connection string
+mongoose.connect("mongodb+srv://Quinesha:mewmew@cluster0.dxzuovb.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+	.then(() => {
+		console.log("Connected to the database")
+	})
+	.catch((error) => {
+		console.error("Error connecting to the database:", error)
+	})
+
+const User = require("./user")
+
+const newUser = new User({
+	name: "Quinesha van Burgh",
+	email: "quinesha@hotmail.com",
+	age: 23
+})
+    
+newUser.save()
+	.then(() => {
+		console.log("User created successfully")
+	})
+	.catch((error) => {
+		console.error("Error creating user:", error)
+	})
