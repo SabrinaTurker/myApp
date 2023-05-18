@@ -27,8 +27,6 @@ app.get("/guest", (req, res) => {
 })
 
 app.post("/login", (req, res) => {
-	// const { username, password } = req.body
-	// check if everything is correct
 	if (req.body.username === "Quinesha" && req.body.password === "meep") {
 		res.render("login")
 	} else {
