@@ -6,7 +6,14 @@ body{
     text-align: center; /* Center everything horizontally */
 }
 
+.background-image {
+    background-image: url('../images/boiling-isles-night.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #logo{ 
+    color: #faf8ff;
     display: flex;
     justify-content: center;
     padding: .5em;
@@ -19,17 +26,20 @@ h1{
     justify-content: center;
 }
 
-.question_h1{
-    font-size: 2em;
-    padding: 0 0 .2em 0
+#h1-index{
+    color: #faf8ff;
 }
 
 h2{
-    color: #1c055b;
+    color: #000000;
     font-size: 1em;
     display: flex;
     justify-content: center;
     margin-top: 0;
+}
+
+#h2-index{
+    color: #faf8ff;
 }
 
 h3{
@@ -37,81 +47,13 @@ h3{
     margin-bottom: .5em;
 }
 
-.Qpage_h2{
-    font-size: 1.5em;
-    padding-top: 1em;
-}
-
-.button{
-    width: 75%;
-    padding: 1em;
-    font-size: 1.5em;
-    margin: 0;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    border-radius: 5em;
-}
-
-.backButton{
-    position: absolute;
-    top: 1.5em;
-    left: 1em;
-}
-
-li{
-    margin: 0;
-    padding: 0;
+#h3-index{
+    color: #faf8ff;
 }
 
 ul{
-    padding:0;
-    margin:0;
-}
-
-.ulButtonlist{
-    display: flex;
-    justify-content: center;
-    padding: 1em 0 0 0;
-    margin: 0;
-}
-
-#ulButtonlist_wrap{
-    display: flex;
-    padding: 1em 0 0 0;
-    margin:0;
-}
-
-.buttonList{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-#buttonlist_tp{
-    position: absolute;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.button_cat{
-    padding: 1em;
-    width: 80vw;
-    margin: 1em;
-    border-radius: 5em;
-    border-style: none;
-}
-
-.button_tp{
-    padding: 1em;
-    margin: .5em;
-    border-radius: 5em;
-    border-style: none;
+    list-style: none;
+    padding: 0;
 }
 
 form {
@@ -175,35 +117,24 @@ button[type="submit"]:hover {
     padding: 10px;
     width: 92%;
 }
-  
-#quizButton-container{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin: 0 auto;
-}
 
-#quizButton{
-    width: 100%;
-    position: fixed;
-    top: 20em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.container h1 {
-    font-size: 3rem;
-    margin-top: 5rem;
+.quizButton {
+    background-color: #9375c3;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 52%;
+    margin: 1em auto;
 }
   
-  
+.error-message {
+    color: red;
+}
   
   
   

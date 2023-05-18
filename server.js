@@ -26,11 +26,43 @@ app.get("/guest", (req, res) => {
 	//loginpage versie 2
 })
 
+app.get("/quiz", (req, res) => {
+	res.render("quiz")
+	//first quiz page
+})
+
+app.get("/quizQuestion2", (req, res) => {
+	res.render("quizQuestion2")
+	//second quiz page
+})
+
+app.get("/quizQuestion3", (req, res) => {
+	res.render("quizQuestion3")
+	//third quiz page
+})
+
+app.get("/quizQuestion4", (req, res) => {
+	res.render("quizQuestion4")
+	//fourth quiz page
+})
+
+app.get("/quizQuestion5", (req, res) => {
+	res.render("quizQuestion5")
+	//fifth quiz page
+})
+
+app.get("/results", (req, res) => {
+	res.render("results")
+	//fifth quiz page
+})
+
 app.post("/login", (req, res) => {
+	// const { username, password } = req.body
+	// check if everything is correct
 	if (req.body.username === "Quinesha" && req.body.password === "meep") {
 		res.render("login")
 	} else {
-		res.render("success", { message: "Invalid username or password" })
+		res.render("index", { error: "Invalid username or password" })
 		//display error message
 	}
 })
