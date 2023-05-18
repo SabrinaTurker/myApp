@@ -63,3 +63,8 @@ newUser.save()
 	.catch((error) => {
 		console.error("Error creating user:", error)
 	})
+
+// eslint-disable-next-line no-unused-vars
+app.use((req, res, next) => {
+	res.status(404).render("404", { imagePath: "/images/404.png" })
+})
